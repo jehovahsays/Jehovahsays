@@ -45,13 +45,11 @@ $wgExtensionCredits ['other'][] = array(
         'url' => "http://www.mediawiki.org/wiki/Extension:jehovahsays",
 );
 //Explicitly defining global variables
-$wgTopBannerCode = '<!-- No Top Banner -->';
-$wgBottomBannerCode = '<!-- No Bottom Banner -->';
+$wgSecurity = '<!-- No Security -->';
 //Code for adding the top and bottom banners to the wiki
 $wgHooks['BeforePageDisplay'][] = 'jehovahsays';
 function jehovahsays( OutputPage &$out, Skin &$skin ) {
-	global $wgTopBannerCode, $wgBottomBannerCode;
-	$out->prependHTML( $wgTopBannerCode );
-	$out->addHTML( $wgBottomBannerCode );
+	global $wgSecurity;
+	$out->prependHTML( $wgSecurity );
 	return TRUE;
 }
