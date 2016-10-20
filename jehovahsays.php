@@ -35,7 +35,7 @@
  * @license https://opensource.org/licenses/MIT The MIT License (MIT)
  */
 
-$wgExtensionCredits ['other'][] = array(
+$wgExtensionCredits ['parser'][] = array(
         'path' => __FILE__,
         'name' => "jehovahsays",
         'description' => "jehovahsays Allows Custom HTTP Security Headers to be added to the wiki as configured in the LocalSettings.php file.",
