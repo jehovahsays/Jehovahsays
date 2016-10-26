@@ -1,11 +1,11 @@
 <?php
 /**
- * jehovahsays Allows Custom HTTP Security Headers to be added to the wiki as configured in the LocalSettings.php file.
+ * Allows Custom HTTP Security Headers to be added to the wiki as configured in the LocalSettings.php file.
  *
  *The MIT License (MIT)
 
 
- *Copyright (c) 2015 Morgan Shatee Byers
+ *Copyright (c) 2016 Morgan Shatee Byers
 
 
  *Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,7 @@
 $wgExtensionCredits ['parser'][] = array(
         'path' => __FILE__,
         'name' => "jehovahsays",
-        'description' => "jehovahsays Allows Custom HTTP Security Headers to be added to the wiki as configured in the LocalSettings.php file.",
+        'description' => "Allows Custom HTTP Security Headers to be added to the wiki as configured in the LocalSettings.php file.",
         'version' => 1.1,
         'author' => "Morgan Shatee Byers",
 		'license-name' => 'MIT',
