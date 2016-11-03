@@ -51,5 +51,12 @@ $wgHooks['BeforePageDisplay'][] = 'jehovahsays';
 function jehovahsays( OutputPage &$out, Skin &$skin ) {
 	global $wgSecurity;
 	$out->prependHTML( $wgSecurity );
+	$out->addMeta( 'viewport', 'width=device-width' );
+    header( 'Content-Type-Options: nosniff' );
+    header( 'XSS-Protection: 1; mode=block' );
+    header( 'Frame-Options: DENY' );
+    header( 'viewport: width=device-width' );
+    header( 'Content-Security-Policy: default-src none; script-src none; style-src none; reflected-xss block;' );
+    header_remove( 'X-Powered-By' );
 	return TRUE;
 }
