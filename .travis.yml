@@ -46,4 +46,9 @@ script: phpunit --configuration phpunit_$DB.xml --coverage-text
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
-  irc: "irc.freenode.org#yourfavouriteroomfortravis"
+  irc: "webchat.freenode.net/#@jehovahsays"
+  template:
+  - "%{repository} (%{commit}) : %{Configuration Results} %{jehovahsays/jehovahsays} "
+  - "Build details: %{build_url}"
+  on_success: [always|never|change] # default: always
+  on_failure: [always|never|change] # default: always
