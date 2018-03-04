@@ -46,10 +46,13 @@ $wgExtensionCredits ['parser'][] = array(
 );
 //Explicitly defining global variables
 $wgSecurity = '<!-- No Security -->';
+$wgBottomSecurity = '<!-- No Bottom Security -->';
 //Code for adding the top and bottom banners to the wiki
 $wgHooks['BeforePageDisplay'][] = 'jehovahsays';
 function jehovahsays( OutputPage &$out, Skin &$skin ) {
 	global $wgSecurity;
+	global $wgBottomSecurity;
 	$out->prependHTML( $wgSecurity );
+	$out->addHTML( $wgBottomSecurity );
 	return TRUE;
 }
